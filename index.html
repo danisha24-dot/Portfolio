@@ -5,49 +5,234 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <title>Nisha Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <nav>
         <div class="nav-container">
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+            <a href="#home" class="logo" data-aos="zoom-in" data-aos-duration="1000">
                 <span>Nisha</span>
-            </div>
+            </a>
             <div class="links">
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#">Projects</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#">About</a></div>
-                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#">Contact Us</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#home">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#projects">Projects</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="#contact">Contact</a></div>
+                <div class="hamburg"><i class="fas fa-bars"></i></div>
             </div>
-           
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+<a href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+                <div class="cancel"><i class="fas fa-times"></i></div>
             </div>
         </div>
     </nav>
-        <section>
-            <div class="main-container">
-                <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
-                    <img src="/img/WhatsApp Image 2026-07-19 at 11.50.35.jpeg" alt="">
-                </div>
-                <div class="content">
-                    <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Nisha</span></h1>
-                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span></span></div>
-                    <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">Hi, I'm Nisha Dangol, a BCS (Cybersecurity & Networking) student from Tokha, Kathmandu. Currently in my 4th semester, I'm passionate about cybersecurity, networking, and building innovative, secure digital solutions while continuously expanding my skills.</p>
-                    <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
-                        <a href="https://github.com/danisha24-dot" ><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.facebook.com/da.nisha.005"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/in/nisha-dangol-25384740a/"><i class="fa-brands fa-linkedin"></i></a>
-            
-                    </div>
-                    
+
+    <!-- ============ HOME ============ -->
+    <section id="home" class="home">
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                <img src="img/profile.jpg" alt="Nisha profile photo">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Hey I'm <span>Nisha</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">I'm a <span></span></div>
+                <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">Hi, I'm Nisha Dangol, a BCS (Cybersecurity & Networking) student from Tokha, Kathmandu. Currently in my 4th semester, I'm passionate about cybersecurity, networking, and building innovative, secure digital solutions while continuously expanding my skills.</p>
+                <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                    <a href="https://github.com/danisha24-dot"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/da.nisha.005"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/nisha-dangol-25384740a/"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
-        </section>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-          AOS.init({offset:0});
-        </script>
-        
+        </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="about">
+        <div class="section-container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">About <span>Me</span></h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-duration="1200">
+                    <h3>Cybersecurity & Networking Student</h3>
+                    <p>I'm Nisha Dangol, currently pursuing my Bachelor's in Cybersecurity & Networking (BCS) in my 4th semester. Living in Tokha, Kathmandu, I am deeply interested in how digital systems work and how to keep them secure.</p>
+                    <p>Beyond academics, I enjoy learning about ethical hacking, network defense, and building secure applications. I believe in continuous learning and strive to expand my knowledge every day.</p>
+                </div>
+                <div class="about-details" data-aos="fade-left" data-aos-duration="1200">
+                    <h3>Quick Info</h3>
+                    <ul>
+                        <li><strong>Education:</strong> BCS (Cybersecurity & Networking), 4th Semester</li>
+                        <li><strong>Background:</strong> Cybersecurity & Networking</li>
+                        <li><strong>Interests:</strong> Ethical hacking, network security, web development</li>
+                        <li><strong>Career Goal:</strong> To become a skilled cybersecurity professional building secure digital solutions</li>
+                        <li><strong>Location:</strong> Tokha, Kathmandu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="skills">
+        <div class="section-container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">My <span>Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Cybersecurity</h3>
+                    <ul>
+                        <li>Ethical Hacking</li>
+                        <li>Network Security</li>
+                        <li>Vulnerability Assessment</li>
+                        <li>Security Fundamentals</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h3>Networking</h3>
+                    <ul>
+                        <li>Network Configuration</li>
+                        <li>TCP/IP & Protocols</li>
+                        <li>Routing & Switching</li>
+                        <li>Network Troubleshooting</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C & C++</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li>HTML & CSS</li>
+                        <li>Responsive Design</li>
+                        <li>Frontend Basics</li>
+                        <li>Web Security Awareness</li>
+                    </ul>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3>Tools & Technologies</h3>
+                    <ul>
+                        <li>Linux</li>
+                        <li>Kali Linux</li>
+                        <li>Wireshark</li>
+                        <li>Git & GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="projects">
+        <div class="section-container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">My <span>Projects</span></h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="project-img">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3>Portfolio Website</h3>
+                    <p>A personal single-page portfolio website built with HTML, CSS, and JavaScript featuring smooth animations and a responsive layout.</p>
+                    <div class="project-tech">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="#" class="btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                        <a href="#" class="btn btn-outline"><i class="fa-solid fa-eye"></i> Demo</a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="project-img">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Network Security Lab</h3>
+                    <p>A hands-on exploration of network security concepts using virtual labs, covering scanning, monitoring, and basic defensive techniques.</p>
+                    <div class="project-tech">
+                        <span>Kali Linux</span><span>Wireshark</span><span>Linux</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="#" class="btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="project-img">
+                        <i class="fa-solid fa-terminal"></i>
+                    </div>
+                    <h3>Python Mini Tools</h3>
+                    <p>A collection of small Python scripts and utilities built while learning programming fundamentals, networking concepts, and automation.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>CLI</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="#" class="btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Contact <span>Me</span></h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="1200">
+                    <h3>Let's Connect</h3>
+                    <p>Feel free to reach out if you have any questions, collaboration ideas, or just want to say hi!</p>
+                    <ul>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:nishadangol20@gmail.com">nishadangol20@gmail.com</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i> Tokha, Kathmandu, Nepal</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://github.com/danisha24-dot"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.facebook.com/da.nisha.005"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/nisha-dangol-25384740a/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form" data-aos="fade-left" data-aos-duration="1200" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message"></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit" class="submit-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                    <p id="form-status" class="form-status"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 <span>Nisha Dangol</span>. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
