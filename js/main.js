@@ -1,13 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     // -----------------------------------
-    // AOS initialization
-    // -----------------------------------
-    if (typeof AOS !== 'undefined') {
-        AOS.init({ offset: 0 });
-    }
-
-    // -----------------------------------
     // Typewriter effect
     // -----------------------------------
     const typewriterEl = document.querySelector('.typewriter span');
@@ -146,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // -----------------------------------
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
+        contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
             const name = document.getElementById('name');
             const email = document.getElementById('email');
@@ -190,14 +183,59 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (valid) {
                 const formStatus = document.getElementById('form-status');
-                if (formStatus) {
-                    formStatus.textContent = 'Thank you for your message! I will get back to you soon.';
-                    formStatus.style.color = '#2e7d32';
+                const submitBtn = contactForm.querySelector('.submit-btn');
+                const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
                 }
-                contactForm.reset();
-                setTimeout(function () {
-                    if (formStatus) formStatus.textContent = '';
-                }, 5000);
+                if (formStatus) {
+                    formStatus.textContent = 'Sending your message...';
+                    formStatus.style.color = '#333';
+                }
+
+                try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: new FormData(contactForm)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Request failed: ' + response.status);
+                    }
+
+                    const result = await response.json();
+
+                    if (formStatus) {
+                        if (result.success) {
+                            formStatus.textContent = 'Thank you for your message! I will get back to you soon.';
+                            formStatus.style.color = '#2e7d32';
+                        } else {
+                            formStatus.textContent = 'Could not send your message. Please try again later.';
+                            formStatus.style.color = '#d32f2f';
+                        }
+                    }
+
+                    if (result.success) {
+                        contactForm.reset();
+                    }
+                } catch (err) {
+                    if (formStatus) {
+                        formStatus.textContent = 'Something went wrong. Please check your connection and try again.';
+                        formStatus.style.color = '#d32f2f';
+                    }
+                } finally {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnHtml;
+                    }
+                    if (formStatus) {
+                        setTimeout(function () {
+                            formStatus.textContent = '';
+                        }, 5000);
+                    }
+                }
             }
         });
 
